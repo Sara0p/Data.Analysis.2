@@ -1,4 +1,4 @@
-# Diabetes Prediction Using Naïve Bayes and Random Forest Classifiers
+
   
 # Fake News Detection
 
