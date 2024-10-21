@@ -1,37 +1,44 @@
 # Diabetes Prediction Using Naïve Bayes and Random Forest Classifiers
   
-Overview
-This project implements two machine learning algorithms, Naïve Bayes and Random Forest, to predict diabetes based on patient data. The models are trained on a dataset containing several medical and demographic features, including pregnancies, glucose levels, blood pressure, skin thickness, insulin levels, BMI, diabetes pedigree function, and age.
+# Fake News Detection
 
-Dataset
-The dataset includes the following features:
+This project aims to detect fake news articles using machine learning techniques. It utilizes a dataset of news articles labeled as real or fake and trains a model to classify new articles.
 
-Pregnancies: Number of times the patient has been pregnant.
-Glucose: Plasma glucose concentration after a glucose tolerance test.
-Blood Pressure: Diastolic blood pressure (mm Hg).
-Skin Thickness: Triceps skinfold thickness (mm).
-Insulin: 2-hour serum insulin (µU/mL).
-BMI: Body mass index.
-Diabetes Pedigree Function: Likelihood of diabetes based on family history.
-Age: The age of the patient.
-Outcome: Diabetes diagnosis result (1 = positive, 0 = negative).
-Models
-1. Naïve Bayes Classifier
-Naïve Bayes is a supervised learning algorithm that applies probability theory for classification. It assumes that the features are conditionally independent, which makes it simple yet effective for certain types of datasets.
+## Dataset
 
-Performance: The Naïve Bayes model achieves around 76% accuracy, making it a reasonably good fit for this dataset.
-Comparison: Naïve Bayes performs similarly to Random Forest in this task, though the choice of model depends on factors like interpretability and computational efficiency.
-2. Random Forest Classifier
-Random Forest is a meta-estimator that builds multiple decision trees and averages their predictions to improve accuracy and reduce overfitting.
+The dataset used in this project consists of two CSV files:
 
-Performance: This model achieves approximately 77% accuracy.
-Interpretability: Feature importance can be analyzed to identify which factors most influence predictions.
-Tuning: Hyperparameters such as the number of trees and maximum tree depth can be adjusted to optimize performance.
-Confusion Matrix: Key metrics like true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN) are used to evaluate model accuracy.
-Key Insights
-Feature Importance: Random Forest allows for analyzing which features contribute most to diabetes prediction.
-Hyperparameter Tuning: Adjusting the number of trees, depth, and other hyperparameters can improve both models' performance.
-Data Imbalance: Techniques like oversampling or undersampling may be necessary if the dataset is imbalanced between positive and negative diabetes cases.
-Conclusion
-Both Naïve Bayes and Random Forest classifiers show good performance on this dataset, with Random Forest slightly outperforming Naïve Bayes. The choice of classifier can depend on specific use cases, computational requirements, and interpretability needs.
+- `train[1].csv`: Contains the training data with news articles and their corresponding labels (real or fake).
+- `test[1].csv`: Contains the testing data with news articles to be classified.
 
+
+## Preprocessing
+
+The following preprocessing steps are applied to the data:
+
+- Handling missing data: Missing values are filled with spaces.
+- Combining text features: The title, author, and text of each article are combined into a single "total" column.
+- Tokenization: The text is tokenized into individual words.
+- Stop word removal: Common words that do not carry significant meaning are removed.
+- Lemmatization: Words are reduced to their base form using lemmatization.
+
+## Feature Extraction
+
+TF-IDF (Term Frequency-Inverse Document Frequency) is used to extract features from the preprocessed text. This technique assigns weights to words based on their importance in the document and the corpus.
+
+## Model Training
+
+Two machine learning models are trained:
+
+- Naive Bayes: A probabilistic classifier based on Bayes' theorem.
+- SVM (Support Vector Machine): A discriminative classifier that finds an optimal hyperplane to separate data points.
+
+## Evaluation
+
+The models are evaluated using accuracy score and classification report metrics. The results show the performance of each model in terms of precision, recall, F1-score, and support.
+
+## Usage
+
+To use this project, follow these steps:
+
+1. Install the necessary libraries:
