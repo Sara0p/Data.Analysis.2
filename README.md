@@ -8,15 +8,6 @@ This project aims to predict diabetes using two classification models: Random Fo
 
 The dataset used in this project is the "Pima Indians Diabetes Database." It contains various medical predictor variables and an outcome variable indicating whether the patient has diabetes or not.
 
-## Methodology
-
-1. **Data Loading and Preprocessing:** The dataset is loaded, explored, and preprocessed to handle missing values and ensure data quality.
-2. **Exploratory Data Analysis (EDA):** EDA techniques are used to gain insights into the dataset, including histograms, correlation heatmaps, and scatter plots.
-3. **Model Selection:** Two classification models are chosen:
-    - Random Forest Classifier
-    - Naive Bayes Classifier
-4. **Model Training and Evaluation:** The selected models are trained on the training data and evaluated on the testing data using metrics such as accuracy, confusion matrix, and classification report.
-5. **Results and Conclusion:** The results are presented, and conclusions are drawn regarding the performance of the models in predicting diabetes.
 
 ## Requirements
 
